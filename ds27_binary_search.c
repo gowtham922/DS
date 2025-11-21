@@ -1,0 +1,2 @@
+#include<stdio.h>
+int main(){int n;scanf("%d",&n);int a[100];for(int i=0;i<n;i++)scanf("%d",&a[i]);int key;scanf("%d",&key);int l=0,h=n-1;while(l<=h){int m=(l+h)/2; if(a[m]==key){printf("%d",m);return 0;} if(a[m]<key)l=m+1;else h=m-1;}printf("-1");return 0;}

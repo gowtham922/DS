@@ -1,0 +1,3 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){int n,m;scanf("%d%d",&n,&m);int g[n+1][n+1];for(int i=1;i<=n;i++)for(int j=1;j<=n;j++)g[i][j]=0;for(int i=0;i<m;i++){int u,v;scanf("%d%d",&u,&v);g[u][v]=g[v][u]=1;}int start;scanf("%d",&start);int vis[n+1];for(int i=1;i<=n;i++)vis[i]=0;int q[100],f=0,r=0;q[r++]=start;vis[start]=1;while(f<r){int u=q[f++];printf("%d ",u);for(int v=1;v<=n;v++)if(g[u][v]&&!vis[v]){vis[v]=1;q[r++]=v;}}return 0;}
